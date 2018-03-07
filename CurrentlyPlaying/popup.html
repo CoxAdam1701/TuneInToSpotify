@@ -2,12 +2,28 @@
 <html>
 
 <head>
+  <!-- load stylesheets: Bootstrap v2.3.0 - http://twitter.github.com/bootstrap/index.html -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"></link>
   <script type="text/javascript" src="popup.js"></script>
+  <!-- load stylesheets: internal -->
+  <link rel="stylesheet" type="text/css" href="../css/global.css"></link>
+  <link rel="stylesheet" type="text/css" href="../css/main.css"></link>
 </head>
 
 <body>
-  <h3 style="font-weight:bold; text-align:center;">TuneIn NowPlaying</h3>
-  <span id="total">N/A</span>
+  <div id="main-outer">
+    <div id="main-inner">
+      <div id="main-title">TuneIn NowPlaying</div>
+      <!-- Maybe implement a webservice to get album art from discogs or amazon -->
+      <img id="main-image" src="icon.png" />
+      <span id="total">N/A</span>
+      <div id="main-about-text">Buttons down here for links to spotify and Google search</div>
+    </div>
+  </div>
+
+  <!-- <h3 style="font-weight:bold; text-align:center;"></h3>
+  <span id="total">N/A</span> -->
+  <!-- <div><button type="submit" id="search">Search on Google</button></div> -->
 </body>
 
 </html>

@@ -1,8 +1,9 @@
 // Update the relevant fields with the new data
 function getSongInfo(info) {
   document.getElementById('total').textContent = info;
+  FullSongTitle = info;
 }
-
+var FullSongTitle = '';
 // Once the DOM is ready...
 window.addEventListener('DOMContentLoaded', function () {
   // ...query for the active tab...
@@ -19,3 +20,7 @@ window.addEventListener('DOMContentLoaded', function () {
       getSongInfo);
   });
 });
+
+// document.getElementById('search').onclick(
+//   window.open('http://google.com/search?q='+FullSongTitle,'_newtab')
+// )
