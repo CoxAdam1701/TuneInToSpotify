@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name":    "TuneIn Now Playing",
+  "version": "0.2",
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [{
+    "matches":    ["*://*.tunein.com/*"],
+    "js":         ["content.js"],
+    "run_at":     "document_idle",
+    "all_frames": false
+  }],
+
+  "page_action": {
+    "default_title": "TuneIn Now Playing",
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+
+}
