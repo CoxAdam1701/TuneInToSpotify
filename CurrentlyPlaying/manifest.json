@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name":    "TuneIn Now Playing",
-  "version": "0.2",
+  "version": "0.5",
 
   "background": {
     "persistent": false,

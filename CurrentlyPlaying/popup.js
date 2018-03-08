@@ -1,9 +1,14 @@
 // Update the relevant fields with the new data
 function getSongInfo(info) {
-  document.getElementById('total').textContent = info;
-  FullSongTitle = info;
+  document.getElementById('nowPlaying').textContent = info[0];
+  document.getElementById('main-image').src = info[1];
+  FullSongTitle = info[0];
+  document.getElementById('spotURL').setAttribute("href", SpotifySearchURL+FullSongTitle);
+  document.getElementById('googleSearch').setAttribute("href", GoogleSearchURL+FullSongTitle);
 }
 var FullSongTitle = '';
+var SpotifySearchURL= "https://open.spotify.com/search/results/"
+var GoogleSearchURL= "https://www.google.com/search?q="
 // Once the DOM is ready...
 window.addEventListener('DOMContentLoaded', function () {
   // ...query for the active tab...
@@ -20,7 +25,3 @@ window.addEventListener('DOMContentLoaded', function () {
       getSongInfo);
   });
 });
-
-// document.getElementById('search').onclick(
-//   window.open('http://google.com/search?q='+FullSongTitle,'_newtab')
-// )
