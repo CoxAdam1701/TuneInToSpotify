@@ -5,12 +5,12 @@
 
   "background": {
     "persistent": false,
-    "scripts": ["background.js"]
+    "scripts": ["js/background.js"]
   },
 
   "content_scripts": [{
     "matches":    ["*://*.tunein.com/*"],
-    "js":         ["content.js"],
+    "js":         ["js/content.js"],
     "run_at":     "document_idle",
     "all_frames": false
   }],
@@ -18,7 +18,13 @@
   "page_action": {
     "default_title": "TuneIn Now Playing",
     "default_popup": "popup.html",
-    "default_icon": "icon.png"
+    "default_icon": {
+      "16": "images/icons8-music-record-filled-16.png",
+      "19": "images/icons8-music-record-filled-19.png",
+      "38": "images/icons8-music-record-filled-38.png",
+      "48": "images/icons8-music-record-filled-48.png", 
+      "100": "images/icons8-music-record-filled-100.png"
+    }
   }
 
 }
