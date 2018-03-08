@@ -5,12 +5,12 @@
 
   "background": {
     "persistent": false,
-    "scripts": ["background.js"]
+    "scripts": ["js/background.js"]
   },
 
   "content_scripts": [{
     "matches":    ["*://*.tunein.com/*"],
-    "js":         ["content.js"],
+    "js":         ["js/content.js"],
     "run_at":     "document_idle",
     "all_frames": false
   }],
@@ -18,7 +18,7 @@
   "page_action": {
     "default_title": "TuneIn Now Playing",
     "default_popup": "popup.html",
-    "default_icon": "icon.png"
+    "default_icon": "images/icon.png"
   }
 
 }
