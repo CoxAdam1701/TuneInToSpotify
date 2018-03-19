@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name":    "TuneIn Now Playing",
   "version": "0.5",
-
+  
   "background": {
     "persistent": false,
     "scripts": ["js/background.js"]

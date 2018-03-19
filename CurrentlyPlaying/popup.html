@@ -10,18 +10,28 @@
   <link rel="stylesheet" type="text/css" href="css/main.css"></link>
 </head>
 <!-- todo: allow button to be pushed when not on active tab and it still gets the currently playing on tunein tab -->
+
 <body>
   <div id="main-outer">
     <div id="main-inner">
-      <div id="main-title">TuneIn Now Playing</div>
-      <img id="main-image" class="artWork" src="images/icon.png" />
+      <div id="radioStation">N/A</div>
+      <img id="albumArt" src="images/icon.png" />
       <div id="artistInfo" style="text-align:center">
-        <a id="spotURL" href="" target="_blank">
-          <span id="nowPlaying">N/A</span>
-        </a>
-      </div>
-      <div id="main-about-text" style="text-align:center">
-        <a id="googleSearch" href="" target="_blank">Google Search</a>
+        <span id="nowPlaying">N/A</span>
+        <div id="searchBarLogos" class="searchBar">
+          <a id="spotifySearch" href="" target="_blank">
+            <img src="images/spotifyLogo.png" alt="Spotify Search">
+          </a>
+          <a id="playMusicSearch" href="" target="_blank">
+            <img src="images/playMusic.png" alt="Google Play Music Search">
+          </a>
+          <a id="googleSearch" href="" target="_blank">
+            <img src="images/googleSearch.png" alt="Google Search">
+          </a>
+          <a id="youTubeSearch" href="" target="_blank">
+            <img src="images/youtubeLogo.png" alt="Youtube Search">
+          </a>
+        </div>
       </div>
     </div>
   </div>

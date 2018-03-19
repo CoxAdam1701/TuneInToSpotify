@@ -1,14 +1,23 @@
-// Update the relevant fields with the new data
-function getSongInfo(info) {
-  document.getElementById('nowPlaying').textContent = info[0];
-  document.getElementById('main-image').src = info[1];
-  FullSongTitle = info[0];
-  document.getElementById('spotURL').setAttribute("href", SpotifySearchURL+FullSongTitle);
-  document.getElementById('googleSearch').setAttribute("href", GoogleSearchURL+FullSongTitle);
-}
+//Set variables
 var FullSongTitle = '';
 var SpotifySearchURL= "https://open.spotify.com/search/results/"
 var GoogleSearchURL= "https://www.google.com/search?q="
+var PlayMusicSearchURL= "https://play.google.com/music/listen?u=1#/sr/"
+var YouTubeSearchUrl = "https://www.youtube.com/results?search_query="
+//Callback funtion to update the popup fields with the data from TuneIn
+function getSongInfo(info) {
+  //set search text
+  document.getElementById('nowPlaying').textContent = info[0];
+  //set album artwork pulled from page
+  document.getElementById('albumArt').src = info[1];
+  //set radio station title
+  document.getElementById('radioStation').textContent = info[2];
+  FullSongTitle = info[0];
+  document.getElementById('spotifySearch').setAttribute("href", SpotifySearchURL+FullSongTitle);
+  document.getElementById('googleSearch').setAttribute("href", GoogleSearchURL+FullSongTitle);
+  document.getElementById('playMusicSearch').setAttribute("href", PlayMusicSearchURL+FullSongTitle);
+  document.getElementById('youTubeSearch').setAttribute("href", YouTubeSearchUrl+FullSongTitle);
+}
 // Once the DOM is ready...
 window.addEventListener('DOMContentLoaded', function () {
   // ...query for the active tab...
